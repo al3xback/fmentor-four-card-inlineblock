@@ -24,8 +24,8 @@
 .card {
 	position: relative;
 	min-height: func.em(220, var.$font-size-primary);
-	padding: func.em(24, var.$font-size-primary)
-		func.em(24, var.$font-size-primary) func.em(80, var.$font-size-primary);
+	padding: func.em(28, var.$font-size-primary)
+		func.em(28, var.$font-size-primary) func.em(80, var.$font-size-primary);
 	background-color: var.$color-white;
 	border-radius: 8px;
 	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
@@ -60,11 +60,11 @@
 }
 
 .card__title {
-	margin-bottom: func.em(8, 20);
+	margin-bottom: func.em(10, 20);
 }
 
 .card__desc {
-	margin-bottom: func.em(8, 13);
+	margin-bottom: func.em(10, 13);
 	font-size: func.em(13, var.$font-size-primary);
 }
 
@@ -87,7 +87,7 @@
 	height: func.em(56, var.$font-size-primary);
 }
 
-@media (min-width: 48em) {
+@media (min-width: 57.5em) {
 	.cards-summary {
 		max-width: func.em(540, var.$font-size-primary);
 		margin: 0 auto;
@@ -103,7 +103,7 @@
 	}
 
 	.cards {
-		margin: 0 func.em(-12, var.$font-size-primary);
+		margin: 0 func.em(-15, var.$font-size-primary);
 		font-size: 0;
 	}
 
@@ -116,12 +116,16 @@
 	.cards__block {
 		display: inline-block;
 		width: 33.33%;
-		padding: func.em(12, var.$font-size-primary);
+		padding: func.em(15, var.$font-size-primary);
 		vertical-align: middle;
 		font-size: 0.9375rem;
 	}
 
 	.cards__block:not(:first-child) {
 		margin-top: 0;
+	}
+
+	.card:not(:first-child) {
+		margin-top: func.em(30, var.$font-size-primary);
 	}
 }
