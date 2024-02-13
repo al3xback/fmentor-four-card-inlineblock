@@ -1,0 +1,127 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as func;
+
+.cards-summary {
+	text-align: center;
+}
+
+.cards-summary__title {
+	font-weight: var.$font-weight-200;
+}
+
+.cards-summary__subtitle {
+	margin-bottom: func.em(16, 24);
+	font-size: func.em(24, var.$font-size-primary);
+	color: var.$color-dark-blue;
+	line-height: 1.25;
+}
+
+.card:not(:first-child),
+.cards__block:not(:first-child) {
+	margin-top: func.em(24, var.$font-size-primary);
+}
+
+.card {
+	position: relative;
+	min-height: func.em(220, var.$font-size-primary);
+	padding: func.em(24, var.$font-size-primary)
+		func.em(24, var.$font-size-primary) func.em(80, var.$font-size-primary);
+	background-color: var.$color-white;
+	border-radius: 8px;
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	text-align: left;
+}
+
+.card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: func.em(4, var.$font-size-primary);
+	background-color: transparent;
+}
+
+.card--supervisor::before {
+	background-color: var.$color-cyan;
+}
+
+.card--team-builder::before {
+	background-color: var.$color-red;
+}
+
+.card--karma::before {
+	background-color: var.$color-orange;
+}
+
+.card--calculator::before {
+	background-color: var.$color-blue;
+}
+
+.card__title {
+	margin-bottom: func.em(8, 20);
+}
+
+.card__desc {
+	margin-bottom: func.em(8, 13);
+	font-size: func.em(13, var.$font-size-primary);
+}
+
+.card__image {
+	position: absolute;
+	bottom: func.em(24, var.$font-size-primary);
+	left: func.em(24, var.$font-size-primary);
+	right: func.em(24, var.$font-size-primary);
+}
+
+.card__image::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.card__image img {
+	float: right;
+	width: func.em(56, var.$font-size-primary);
+	height: func.em(56, var.$font-size-primary);
+}
+
+@media (min-width: 48em) {
+	.cards-summary {
+		max-width: func.em(540, var.$font-size-primary);
+		margin: 0 auto;
+	}
+
+	.cards-summary__title,
+	.cards-summary__subtitle {
+		font-size: func.em(36, var.$font-size-primary);
+	}
+
+	.cards-summary__subtitle {
+		margin-bottom: func.em(16, 36);
+	}
+
+	.cards {
+		margin: 0 func.em(-12, var.$font-size-primary);
+		font-size: 0;
+	}
+
+	.cards::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.cards__block {
+		display: inline-block;
+		width: 33.33%;
+		padding: func.em(12, var.$font-size-primary);
+		vertical-align: middle;
+		font-size: 0.9375rem;
+	}
+
+	.cards__block:not(:first-child) {
+		margin-top: 0;
+	}
+}

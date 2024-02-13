@@ -1,0 +1,9 @@
+main,
+main > .container,
+main > .container::before {
+	min-height: inherit;
+}
+
+main > .container {
+	text-align: center;
+}
