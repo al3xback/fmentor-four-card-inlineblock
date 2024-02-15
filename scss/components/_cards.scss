@@ -73,16 +73,11 @@
 	bottom: func.em(24, var.$font-size-primary);
 	left: func.em(24, var.$font-size-primary);
 	right: func.em(24, var.$font-size-primary);
-}
-
-.card__image::after {
-	content: '';
-	display: table;
-	clear: both;
+	text-align: right;
 }
 
 .card__image img {
-	float: right;
+	display: inline-block;
 	width: func.em(56, var.$font-size-primary);
 	height: func.em(56, var.$font-size-primary);
 }
@@ -105,12 +100,6 @@
 	.cards {
 		margin: 0 func.em(-15, var.$font-size-primary);
 		font-size: 0;
-	}
-
-	.cards::after {
-		content: '';
-		display: table;
-		clear: both;
 	}
 
 	.cards__block {
