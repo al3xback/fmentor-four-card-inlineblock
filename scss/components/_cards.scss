@@ -5,15 +5,16 @@
 	text-align: center;
 }
 
-.cards-summary__title {
+.cards-summary__subtitle {
+	margin-bottom: func.em(6, 24);
+	font-size: func.em(24, var.$font-size-primary);
 	font-weight: var.$font-weight-200;
+	color: var.$color-dark-blue;
+	line-height: 1;
 }
 
-.cards-summary__subtitle {
+.cards-summary__title {
 	margin-bottom: func.em(16, 24);
-	font-size: func.em(24, var.$font-size-primary);
-	color: var.$color-dark-blue;
-	line-height: 1.25;
 }
 
 .card:not(:first-child),
@@ -70,9 +71,9 @@
 
 .card__image {
 	position: absolute;
-	bottom: func.em(24, var.$font-size-primary);
-	left: func.em(24, var.$font-size-primary);
-	right: func.em(24, var.$font-size-primary);
+	bottom: func.em(20, var.$font-size-primary);
+	left: func.em(28, var.$font-size-primary);
+	right: func.em(28, var.$font-size-primary);
 	text-align: right;
 }
 
@@ -94,7 +95,7 @@
 	}
 
 	.cards-summary__subtitle {
-		margin-bottom: func.em(16, 36);
+		margin-bottom: func.em(10, 36);
 	}
 
 	.cards {
